@@ -1,0 +1,27 @@
+Una funcion en go se define de la siguiente manera:
+
+func (e receptor) identificador (parametros) retorno{codigo}
+
+// You can edit this code!
+// Click here and start typing.
+package main
+
+import "fmt"
+
+func main() {
+	fmt.Println(imprimirNombre("Cristian"))
+	nombre, emisor := especificacionFactura(123456)
+	fmt.Println("El numero de la factura es", nombre, "y el emisor es:", emisor)
+
+}
+
+func imprimirNombre(nombre string) string {
+	saludar := "Hola" + nombre
+	return saludar
+}
+
+func especificacionFactura(consecutivo int) (int, string) {
+	nombreFactura := consecutivo
+	emisor := fmt.Sprint("Cristian")
+	return nombreFactura, emisor
+}

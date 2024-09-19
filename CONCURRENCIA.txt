@@ -1,0 +1,6 @@
+LA CONCURRENCIA ES EJECUTAR DIFERENTES TAREAS EN SIMULTANEO.
+
+Puede confundirese con paralelismo.
+
+La gran diferencia es que el paralelismo se ejecuta cuando hay varios procesadores que ejecutan las funciones al mismo tiempo.
+Mientras quie la concurrencia es un  paradigma donde en un solo procesador por medio de diferentes hilos, se van ejecutando las tareas. Pero aunque parezca que las funciones o tareas o actividades corren al mismo tiempo. LA REALIDAD  es qué internamente se ejecutan de a poco, primero una, se pausa, se ejecuta la segunda, se pausa, se vuelve a ejecutar la primera, y asi sucesivamente para que termine la ejecución de ambas tareas.

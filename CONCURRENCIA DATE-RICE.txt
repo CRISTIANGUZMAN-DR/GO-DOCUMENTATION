@@ -1,0 +1,11 @@
+Data Race: Es cuando hay varias Gorutinas accediendo simultaneamente a una variable que esta en el mismo espacio de memoria. Estas Gorutinas comparten el acceso a la misma variable. Siempre evitar los Data Races!!
+Mutex: Mutex es un tipo de dato del paquete sync que Nos ayuda a evitar el acceso simultaneo de diferentes Gorutinas sobre una misma variable. Basicamente evita la creacion de Data Races. Mutex bloquea una variable de ser accedida cuando una Gorutina la esta usando.
+
+la funciones que implementa Mutex sonÑ Mutex.Lock() y Mutex.Unlock()
+
+Atomic: Atomic es un subopaquete del paquete sync que nos ayuda a eliminar los race condition (acceso simultaneo de diferentes forutines sobre una misma variable)
+
+las funciones que implementa Atomic son atomic.AddInt64(bsl *int64, delta int) y atomic.LoadInt64(bls *int64)
+
+
+

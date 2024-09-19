@@ -1,0 +1,10 @@
+El paquete bcrypt se utiliza para encriptar información a tipo hash (que es el cifrado o el algoritmo para convertir información en texto encriptado)
+
+Este paquete no hace parte de golang directamente.
+
+Con la función bcrypt.GenerateFromPassword(pass []byte, monto)
+
+https://go.dev/play/p/BmCqt60gpHl
+
+
+Si queremos por ejemplo usar otra función de ese paquete para comparar contraseñas, podemos usar CompareHashAndPassword(hashPasword, password []byte)

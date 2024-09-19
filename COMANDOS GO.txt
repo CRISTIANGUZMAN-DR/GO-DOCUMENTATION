@@ -1,0 +1,14 @@
+Comandos go
+
+MODIFICAR ARCHIVOS DE GO: Cuando se edita con vim desde la consola, con los comandos ":wq" se guarda y se sale del archivo de edicion y con ":!q" se sale y no se guarda.
+
+-go version -> saber la version de go
+- go env -> variables de entorno (todas las variables de entorno que trajo la instalación de go)
+- go help + comando -> se usa para saber cómo se utiliza el comando qué le pasemos
+- go help build -> información sobre los comandos con banderas (-a, -n, -v)
+- go fmt + archivoAFomatear-> Convertir codigo a codigo idiomatico(se ajusta el texto legible)
+- fo gmt ./... -> para formatear todos los archivos dentro del directorio en que nos encontremos
+- go run + archivoAEjecutar -> se compila y se corre el archivo
+- go build + archivo -> genera un nuevo archivo binario
+- ./archivoBinarioGenerado -> Esto nos sirve para poder ver errores de compilación y de ejecución que tengamos en nuestro archivo
+- go install -> crea un binario del archivo en el qué nos encontremos en la ruta del path (donde se encuentra la carpeta bin de dónde se almacenan las carpetas de go)

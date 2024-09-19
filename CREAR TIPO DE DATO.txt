@@ -1,0 +1,11 @@
+Para crear un tipo de dato lo manejamos en la siguiente sintaxis:
+
+type numero int / primero la palabra reservada type, luego la constante o el nombre del tipo de dato y por ultimo el tipo de dato subyacente que va a tomar
+
+lo que esto me permite es que:
+
+type numero int
+var b numero
+a=2
+b=2
+a y b son diferentes porque aunque son el mismo numero son de diferente tipo

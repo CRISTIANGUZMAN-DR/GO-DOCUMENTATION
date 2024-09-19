@@ -1,0 +1,22 @@
+Las funciones anonimas no son más que funciones definidas en el main que no tienen un identificador
+
+import "fmt"
+
+func main(){
+	func(){
+		fmt.Println("Hola mundo")
+	}()
+}
+
+// SE EJECUTA LA FUNCION AUTOMATICAMENTE PORQUE SE LLAMA ELLA MISMA DESDE EL MAIN
+//También podemos definir parametros y también, igualar la función a una variable por si queremos ejecutarla en algún momento exacto
+
+import "fmt"
+
+func main(){
+	suma := func(num1 int, num2 int){
+		fmt.Println(num1 + num2)
+	}
+	
+	suma(20,22)
+}

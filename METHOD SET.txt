@@ -1,0 +1,16 @@
+La revision de method set nos habla de como se pueden manejar los valores en una funcion teniendo en cuenta los receptores y los valores
+
+receptores    valores
+ (t T)        T y *T
+ (t *T)         *T
+
+
+cuando el receptor es de cualquier tipo los valores pueden ser punteros o valores normales
+
+cuando el receptor es de tipo puntero solo puede recibir valores punteros
+
+Para ser mas especifico, los method set hacen referencia a cuando llamo una funcion que recibe una interfaz de cualquier tipo, si dicho tipo es una funcion que esta recibida por un puntero, solamente podemos llamar la funcion enviando el valor tipo puntero.
+
+Pero si la funcion que esta implementando la interfaz es una interfaz que esta recibida por un tipo cualquiera no puntero, podemos hacer su llamado referenciando un valor puntero o un valor normal.
+
+https://go.dev/play/p/cELQDRjFgZg

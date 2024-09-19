@@ -1,0 +1,9 @@
+* Es para procesadores con multiples nucleos
+
+* Lenguaje compilado interpretado por binarios lo que hace que como todos los sistemas operativos entiendan la codificacion binaria, sea eficiente, a esto se le llama simpatia mecanica.
+
+* Portable - compila en varios sistemas operativos
+
+* Se creo con un enfoque en la necesidad de eficiencia y la simplicidad. Ya que con otros lenguajes, se debia escoger entre facil programacion, eficiencia de compilacion o eficiencia de ejecucion, por ello se crea Go en 2009.
+
+* 

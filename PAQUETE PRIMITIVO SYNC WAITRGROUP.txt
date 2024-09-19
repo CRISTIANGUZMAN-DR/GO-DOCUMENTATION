@@ -1,0 +1,25 @@
+El paquete sync contiene primitivos que nos ayudan a organizar o a sincronizar las goroutines con el fin de que se puedan ejectura todas simultaneamente y el programa no se acabe sino hasta qué se finalicen todas las tareas.
+
+Uno de sus primitivos es el type WaitGroup
+
+WaitGroup es un tipo de dato que contiene las funciones necesarias para sincronzizar la ejecución del main con las goroutines.
+
+Un WaitGroup espera que una colección de gorutinas terminen su trabajo. La gorutina de main llama Add para configurar el número de gorutinas por las que tiene que esperar. Luego cada una de las gorutinas corre y llama a Done cuando terminan. Al mismo tiempo, Wait puede ser usado para bloquear hasta que todas las gorutinas hayan finalizado.
+
+Escribir código concurrente es súper fácil: todo lo que tenemos que hacer es poner “go” en frente de una llamada a una función o método. 
+
+ESTO ES CONCURRRNCIA Y NO PARALELISMO ya que no podemos ejecutar codigo paralelo porque solo tenemos un procesador, entonces se utiliza esa metodologis concurrente.
+
+runtime.NumCPU()
+
+runtime.NumGoroutine()
+
+sync.WaitGroup
+
+func (wg *WaitGroup) Add(delta int) 
+
+func (wg *WaitGroup) Done() 
+
+func (wg *WaitGroup) Wait()
+
+https://go.dev/play/p/D02Tq_Ts2vM

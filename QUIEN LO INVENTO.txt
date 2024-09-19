@@ -1,0 +1,3 @@
+Ken Thompson (B,C,UNIX, UTF-8)
+Rob Pike (UNIX, UTF-8)
+Robert Griesemer (HotSpot, JVM)

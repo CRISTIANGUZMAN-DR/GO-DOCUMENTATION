@@ -1,0 +1,13 @@
+PAQUETE SORT DE LA LIRERÍA ESTANDAR
+
+
+El paquete SORT nos permite ordenar los datos ya sea alfabeticamente o enumeradamente (menor a mayor o mayor a menor)
+
+El paquete sort implementa una interfaz con metodos de organización de datos, los cuales son:
+
+func (a ByAge) Len() int           { return len(a) }
+func (a ByAge) Swap(i, j int)      { a[i], a[j] = a[j], a[i] }
+func (a ByAge) Less(i, j int) bool { return a[i].Age < a[j].Age }
+
+
+https://go.dev/play/p/oh_TXm4m6Km

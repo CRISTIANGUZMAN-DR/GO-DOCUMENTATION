@@ -1,0 +1,7 @@
+...tipo = cantidad variable de parametros + interface{} significa que puede ir cualquier tipo de dato
+
+:= para definir una variable dentro de la funcion y ademas funciones cortas
+
+= para darle un valor a una variable que ya fue inicializada
+
+var = crear una variable global que pueda utilizar en cualquier parte del codigo

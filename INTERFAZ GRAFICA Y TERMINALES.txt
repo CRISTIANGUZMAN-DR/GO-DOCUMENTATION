@@ -1,0 +1,13 @@
+GUI = interfaz de usuario 
+Terminal = linea de comandos = consola
+
+COMANDOS IMPORTANTES PARA TERMINALES
+
+pwd -> Para ver el directorio en el que estoy
+cd -> cambiar de directorio
+ls -> Listar los archivos de un directorio
+ls -la -> Nos lista todos archivos dentro de un directorio incluyendo los ocultos
+
+Cuando veamos un simbolo / al principio quiere decir que estamos en el directorio raiz, mientras que si vemos una circunfiriña quiere decir que estamos en el home, que es un directorio despues del raiz
+
+touch -> Crear un archivo vacio

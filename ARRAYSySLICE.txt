@@ -1,0 +1,65 @@
+Los arrays se definen de la siguiente forma
+
+var x [4]int para lo cual estoy definiendo un array de 4 posiciones de tipo entero
+var y [5]int tambien es un arreglo pero debido a que tienen diferente longitud sus tipos son diferentes
+
+PARA DEFINIR UN ARRAY LO DEFINO CON VAR
+
+UN SLICE es un tipo de arreglo al cual hay que especificarle su tamaño de forma dinamica:
+
+x := []int{1, 2, 3, 4, 5}
+
+PARA DEFINIR UN SLICE LO DEFINO CON LA VARIABLE DE DECLARACION CORTA
+
+
+func main() {
+	x := []string{"Efren", "Dario", "Angel"}
+	fmt.Println(x[0])
+	fmt.Println(x[1])
+	fmt.Println(x[2])
+
+	for d, b := range x {
+		fmt.Println(d, " ", b)
+	}
+}
+
+CON LA FUNCION APPEND AGREGO INDICES CON VALOR A UN SLICE
+
+append recibe un slice y seguido de una coma los valores que le voy a AGREGAR y para eliminar no es eliminar sino DEJAR DE AGREGAR:
+
+func main() {
+	np := []int{2, 4, 6, 7, 8, 10}
+	fmt.Println(np)
+
+	np = append(np, 12, 14, 16)
+	fmt.Println(np)
+
+	np = append(np[:3], np[4:]...)
+	fmt.Println(np)
+}
+
+con la funcion make CREAMOS UN SLICE que nos permite expandir el tipo supyacente el cual es un arreglo, con esto mejoramos la utilizacion de recursos en el programa
+
+x := make([]int, 10, 50)
+	fmt.Println(x)
+
+ejercicio:
+
+	primarySlice := make([]string, 10, 20)
+	fmt.Println(primarySlice)
+	primarySlice[0], primarySlice[1] = "Cristian", "Guzman"
+	fmt.Println(primarySlice)
+
+	for i, v := range primarySlice {
+		fmt.Println(i, " ", v)
+	}
+
+SILCES MULTIDIMENSIONAL O SLICE DE SLICE
+
+Un slice de slice es un tipo de dato que se define de la siguiente manera:
+
+[][]string{slice1,slice2}
+
+	a := []string{`1998`, `1999`, `2000`, `2001`}
+	b := []string{`Chili`, `topo`, `marino`, `kain`}
+	x := [][]string{a, b}

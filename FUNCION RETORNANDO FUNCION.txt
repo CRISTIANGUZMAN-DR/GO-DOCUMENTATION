@@ -1,0 +1,16 @@
+Así como retornamos cualquier tipo de dato dentro de una función también podemos retornar una función completa en caso de ser necesaria
+
+import "fmt"
+
+func main() {
+	calcularSuma := sumar(10, 20)
+	fmt.Printf("%T\n", calcularSuma)
+	retornoSuma := calcularSuma(10, 20)
+	fmt.Println(retornoSuma)
+}
+
+func sumar(x int, y int) func(x int, y int) int {
+	return func(x int, y int) int {
+		return x + y
+	}
+}

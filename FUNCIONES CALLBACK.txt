@@ -1,0 +1,27 @@
+CALLBACK: Los callback son funciones a las cuales se les pasa como parametros otras funciones.
+
+import "fmt"
+
+func main() {
+	slice := []int{11, 12, 15, 13, 19, 18, 14}
+	x := sumaPares(suma, slice...)
+	fmt.Println(x)
+}
+
+func suma(numeros ...int) int {
+	resultado := 0
+	for _, v := range numeros {
+		resultado += v
+	}
+	return resultado
+}
+
+func sumaPares(f func(num ...int) int, numeros ...int) int {
+	slicePares := []int{}
+	for _, v := range numeros {
+		if v%2 == 0 {
+			slicePares = append(slicePares, v)
+		}
+	}
+	return f(slicePares...)
+}

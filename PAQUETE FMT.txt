@@ -1,0 +1,4 @@
+EN EL PAQUETE FMT ENCONTRAMOS VERBOS QUE NOS TRAEN DIFERENTES VALORES DEL FORMATO, POR EJEMPLO
+
+SI ESPECIFICAMOS %v traemos el valor de la variable que especifiquemos en el segundo parametro
+SI ESPECIFICAMOS %T traemos el tipo de dato de la variable que especifiquemos en el segundo parametro

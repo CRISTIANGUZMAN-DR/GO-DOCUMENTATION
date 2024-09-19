@@ -1,0 +1,6 @@
+Funciones closures
+
+Las funciones closures refieren a un scope que se hace con los datos en variables anonimas, allí habla del encapsulamiento que tienen las variables dentro del código, ejemplo:
+
+
+https://go.dev/play/p/OptjBQ-1rfT

@@ -1,0 +1,14 @@
+Una funcion de cantidad variable de parametros es aquella que recibe una cantidad x de parametros de un tipo de dato la cual se escribe de la siguiente forma:
+
+
+func main(){
+	suma(10,10,10,10,10,10,10,10,10,10)
+}
+
+func suma(numeros ...int){
+	suma := 0
+	for _, val := range numeros{
+		suma += val
+	}
+	fmt.Println(suma)
+}

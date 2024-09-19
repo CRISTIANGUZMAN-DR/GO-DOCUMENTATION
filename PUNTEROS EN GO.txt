@@ -1,0 +1,67 @@
+PUNTEROS
+Los punteros son dirección en la memoria ram de un servidor los cuales se encargan de almacenar información, por ejemplo:
+
+package main
+
+import "fmt"
+
+func main() {
+	a := 42
+	fmt.Println(a)
+	fmt.Println(&a)
+
+	fmt.Printf("%T\n", a)
+	fmt.Printf("%T\n", &a)
+
+	var b *int = &a
+	fmt.Println(b)
+	fmt.Println(*b)
+}
+
+
+¿cuando usar puntero? Cuando necesitemos modificar el valor directamente en la dirección de la memoria para que en todo el código tome ese valor la variable
+
+Los punteros cuando se envian como argumentos llevan un ampersan '&' y cuando se reciben como parametros se escriben con *, ambos referenciando a que es un type puntero (espacio almacenado en una dirección de memoria)
+
+Ejemplo, en este caso si se va a cambiar el valor de la variable p1, así el cambio no se haya hecho dentro del main (donde se está declarando la variable) pero al pasar su dirección en memoria y modificarlo directamente desde allí, sí se va a cambiar el valor
+
+
+import "fmt"
+
+type persona struct {
+	name string
+}
+
+func main() {
+	p1 := persona{
+		name: "Cristian Guzman",
+	}
+	fmt.Println(p1)
+	cambiarNombre(&p1)
+	fmt.Println(p1)
+}
+
+func cambiarNombre(p *persona) {
+	p.name = "James Rodriguez"
+}
+
+IMPORTANTE: si yo no paso un puntero sino la variable normal, no va a modificar su valor original
+
+import "fmt"
+
+type persona struct {
+	name string
+}
+
+func main() {
+	p1 := persona{
+		name: "Cristian Guzman",
+	}
+	fmt.Println(p1)
+	cambiarNombre(p1)
+	fmt.Println(p1)
+}
+
+func cambiarNombre(p persona) {
+	p.name = "James Rodriguez"
+}

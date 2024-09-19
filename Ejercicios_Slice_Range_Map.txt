@@ -1,0 +1,38 @@
+// You can edit this code!
+// Click here and start typing.
+package main
+
+import "fmt"
+
+func main() {
+	xs1 := []string{"Batman", "Jefe", "Vestido de negro"}
+	xs2 := []string{"Robin", "Ayudante", "Vestido de colores"}
+
+	xss := [][]string{xs1, xs2}
+	fmt.Println(xss)
+
+	for i, reg := range xss {
+		fmt.Println("El indicie ", i)
+		for _, val := range reg {
+			fmt.Println("\t", val)
+		}
+	}
+
+	xs5 := map[string][]string{
+		"cristian": []string{"futbol", "tenis", "conducir"},
+		"laura":    []string{"television", "viajar", "estudiar"},
+		"brayan":   []string{"jugar", "dormir", "manejar"},
+	}
+	
+	xs5["yaneth"] = []string{"cocinar", "dormir", "pelear"}
+
+	fmt.Println(xs5)
+
+	for key, val := range xs5 {
+		fmt.Println("A", key, "le gusta:")
+		for i, hobbie := range val {
+			fmt.Println(i+1, ".", hobbie)
+		}
+	}
+
+}

@@ -1,0 +1,53 @@
+Continuación de comandos para la terminal unix:
+
+cat -> Con cat podemos imprimir el contenido que hay dentro de un archivo
+evv -> Ver todas las variables de entorno
+
+ESPECIFICACIONES:
+
+Cuando pulsamos ls -la la terminal nos muestra todos los archivos y carpetas que hayan dentro de el directorio dónde ejecutemos el comando.
+
+Desglosando la información que nos muestra:
+
+La primera parte nos indica los permisos que tiene cada archivo o carpeta:
+
+drwxr-xr-x  6 user group 4096 Sep  6 14:00 .
+drwxr-xr-x  3 user group 4096 Sep  6 13:58 ..
+-rw-r--r--  1 user group  220 Sep  6 13:58 .bash_logout
+-rw-r--r--  1 user group 3771 Sep  6 13:58 .bashrc
+-rw-r--r--  1 user group  655 Sep  6 13:58 .profile
+drwxr-xr-x  2 user group 4096 Sep  6 13:58 my_directory
+-rw-r--r--  1 user group  123 Sep  6 14:00 my_file.txt
+
+Si el primer caracter misma empieza por una 'd' hace referncia a qué es un directorio o carpeta, si empieza por '-' sor archivos.
+
+Los siguientes caracteres hacen referencia a:
+rwx:
+r -> rigth : leer
+w -> write : escribir
+x -> execution : ejecución
+
+Los 3 primeros caracteres son los permisos del usuario
+Los 3 caracteres del medio son los permisos del grupo
+Los 3 ultimos caracteres son los permisos del resto del mundo
+
+La tercera columna nos especifica el usuario dueño del archivo.
+
+La cuarta columna nos habla del grupo del archivo.
+
+chmod -> modificar los permisos
+
+Estructura de permisos:
+R (read) = 4
+W (write) = 2
+X (execution) = 1 
+Si quiero dar permisos de escritura y de leer, sumo el 4 y el 2 = 6
+(dicho procedimiento se hace por cada columna)
+Para ejecutar todos los permisos, sumos los 3 numeros, que sería 4+2+1 = 7
+En caso de querer dar todos los permisos a todos los usuarios grupos y el resto del mundo, damos el comando -> chmod 777 + nom_archivo
+
+Si lo que queremos es modificar un directorio, y queremos modificar todos los archivos que están dentro del directorio lo qué tenemos que ejecutar es la recursividad para que se ejecute de forma recursiva en todos los archivos, con el comando -r
+chmod -r 600 + nom_directorio/
+
+
+MODIFICAR ARCHIVOS DE GO: Cuando se edita con vim desde la consola, con los comandos ":wq" se guarda y se sale del archivo de edicion y con ":!q" se sale y no se guarda.

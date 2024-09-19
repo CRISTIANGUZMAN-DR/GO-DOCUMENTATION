@@ -1,0 +1,31 @@
+El paquete sort es una libreria que tiene metodos para ayudar a ordenar estructuras, slice, etc, ejemplo:
+
+El metodo Ints, que nos ayuda a organizar un silce en orden creciente.
+
+package main
+
+import (
+	"fmt"
+	"sort"
+)
+
+func main() {
+	s := []int{5, 2, 6, 3, 1, 4} // unsorted
+	sort.Ints(s)
+	fmt.Println(s)
+}
+
+El metodo Strings que nos ayuda a organizar un slice en orden alfabetico
+
+package main
+
+import (
+	"fmt"
+	"sort"
+)
+
+func main() {
+	s := []string{"Go", "Bravo", "Gopher", "Alpha", "Grin", "Delta"}
+	sort.Strings(s)
+	fmt.Println(s)
+}

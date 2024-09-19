@@ -1,0 +1,68 @@
+El struct es un tipo de dato que puede definirse para utilizar diferentes campos de diferentes tipos segun se requiera
+
+// You can edit this code!
+// Click here and start typing.
+package main
+
+import "fmt"
+
+type persona struct {
+	nombre   string
+	apellido string
+	edad     int
+	sexo     string
+}
+
+func main() {
+	persona1 := persona{
+		nombre:   "Cristian",
+		apellido: "Daniel",
+		edad:     21,
+		sexo:     "M",
+	}
+
+	fmt.Println(persona1)
+}
+
+
+SEGUNDO EJEMPLO:
+
+// You can edit this code!
+// Click here and start typing.
+package main
+
+import "fmt"
+
+type encabezado struct {
+	consecutivo       int
+	empresa_remitente string
+	ciudad            string
+}
+
+type valores struct {
+	valor_flete int
+	valor_iva   int
+	valor_total int
+}
+
+type datosFactura struct {
+	encabezado
+	valores
+}
+
+func main() {
+	utALA := datosFactura{
+		encabezado: encabezado{
+			consecutivo:       4001720,
+			empresa_remitente: "Union Temporal",
+			ciudad:            "Bogotá",
+		},
+		valores: valores{
+			valor_flete: 25000,
+			valor_iva:   2500,
+			valor_total: 27500,
+		},
+	}
+
+	fmt.Println(utALA)
+}

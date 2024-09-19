@@ -1,0 +1,6 @@
+json unmarshall funciona para recibir un json y que nuestra aplicación pueda interpretarlo, para esto se lleva a cabo el siguiente ejercicio simulando una variable jsonBlob como un formato json con información
+
+Posterior a eso declaramos un tipo animal con tipo subyacente struct la cual se crea para recibir la informacion del json
+
+https://go.dev/play/p/sxYlwDV9Pec
+https://go.dev/play/p/ZEYgGD9SNTL

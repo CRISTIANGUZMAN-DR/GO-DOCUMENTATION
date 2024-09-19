@@ -1,0 +1,6 @@
+El Stdout lo usamos para cambiar directamente a la raiz el json, para enviar esa información directamente al "CABLE"
+
+para realizar eso necesitamos una función de json.NewEncoder(os.Stdout).Encode(v interface{})
+Donde la función json.NewEncoder retorna una *Encode y ese puntero a Encode es recibido en una funcion llamada Encode
+
+https://go.dev/play/p/SBwW36MQTvK

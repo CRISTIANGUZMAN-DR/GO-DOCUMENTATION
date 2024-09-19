@@ -1,0 +1,33 @@
+Las funciones metodos en go funcionan indicando en una funcion el tipo de struct que  va a tener acceso a esa funcion, para que toda variable que sea iguala a ese struct pueda ser utilizada para llamar el metodo. Ejemplo:
+
+// You can edit this code!
+// Click here and start typing.
+package main
+
+import "fmt"
+
+type persona struct {
+	nombre   string
+	apellido string
+}
+
+type informacionPersona struct {
+	persona
+	edad int
+}
+
+func main() {
+	p1 := informacionPersona{
+		persona: persona{
+			nombre:   "Cristian",
+			apellido: "Guzman",
+		},
+		edad: 21,
+	}
+
+	p1.obtenerInformacionPersona()
+}
+
+func (info informacionPersona) obtenerInformacionPersona() {
+	fmt.Println("Hola soy", info.nombre, info.apellido, "y tengo", info.edad, "años")
+}

@@ -1,0 +1,7 @@
+Un map es una estructura que almacena datos con llaves valor, es decir, se define un tipo de dato que va a ser la llave con la cual vamos a poder acceder a los valores que tenga dicha llave, a los cuales se le denomina valor:
+
+x := [string]int{
+	["edad"]: 21,
+	["altura"]: 175,
+	["peso"]: 72, 
+}
